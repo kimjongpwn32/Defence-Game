@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
     [SerializeField] GameObject laserPrefab;
+    [SerializeField] float projectileSpeed = 10f;
 
     float xMin;
     float xMax;
@@ -16,6 +17,14 @@ public class Player : MonoBehaviour
     void Start()
     {
         SetUpMoveBoundaries();
+        StartCoroutine(writeToConsole());
+    }
+
+    IEnumerator writeToConsole()
+    {
+        Debug.Log("Hello1");
+        yield return new WaitForSeconds(3);
+        Debug.Log("Hello2");
     }
 
     public void SetUpMoveBoundaries()
@@ -37,7 +46,10 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             //No rotation
-            Instantiate(laserPrefab, transform.position, Quaternion.identity);
+            //object,position,rotation
+            GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+
         }
     }
 
