@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9009475509182022909
+--- !u!1 &3412283733407135741
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9009475509182022911}
-  - component: {fileID: 9009475509182022908}
-  - component: {fileID: -2730338360886470195}
+  - component: {fileID: 3051312792969039765}
+  - component: {fileID: 7659212333725995810}
+  - component: {fileID: 7075265428601927007}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9009475509182022911
+--- !u!4 &3051312792969039765
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009475509182022909}
+  m_GameObject: {fileID: 3412283733407135741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.36, y: 7.24, z: -7.7018905}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9009475509182022908
+--- !u!212 &7659212333725995810
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009475509182022909}
+  m_GameObject: {fileID: 3412283733407135741}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,20 +83,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2730338360886470195
+--- !u!114 &7075265428601927007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009475509182022909}
+  m_GameObject: {fileID: 3412283733407135741}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d58571f78a269e74592b6d5aed7c5078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 6041640869117628342, guid: a9aaa8f3310087b4abb73cecd3fc9055, type: 3}
-  - {fileID: 2566348040327889421, guid: b09a9133f398e8b419de5936d85853b2, type: 3}
-  - {fileID: 3375929802841436919, guid: dfbb442d4c7afbc40baf8b91c6a4b502, type: 3}
+  waveConfig: {fileID: 11400000, guid: cda8d293f296b2f449fa402ea3321b04, type: 2}
   moveSpeed: 3
